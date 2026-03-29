@@ -190,6 +190,7 @@ String readInverterData() {
   cumulatedEnergy = inverter.readCumulatedEnergy(CUMULATED_TOTAL_ENERGY_LIFETIME);
   if(cumulatedEnergy.state.readState == true ) {
     data += "\"energy\": \"" + String(cumulatedEnergy.energy) + "\"";
+    emptyJson = false;
   }
 
   dataDSP = inverter.readDSP(DSP_GRID_POWER_ALL);
